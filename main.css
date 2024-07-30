@@ -1,0 +1,58 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Bloco principal */
+.product-list {
+    max-width: 640px;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+}
+
+/* Elementos dentro do bloco */
+.product-list__item {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.product-list__item-image {
+    width: 100%;
+}
+
+.product-list__item-name {
+    font-size: 1.2em;
+    margin: 8px 0;
+}
+
+.product-list__item-description {
+    color: gray;
+}
+
+/* Modificador para destaque */
+.product-list__item--highlighted {
+    border: 2px solid gold;
+    padding: 8px;
+    background-color: #ffff42;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em tablets */
+    }
+}
+
+@media (max-width: 640px) {
+    .product-list {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    }
+}
